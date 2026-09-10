@@ -7,7 +7,7 @@ import Menu from "../Pages/User/Menu";
 import MenuDetails from "../Pages/User/MenuDetials";
 import AdminProtected from "../Components/AdminProtected";
 import AdminHome from "../Pages/admin/adminHome";
-import AdminWrapper from "../Pages/admin/adminWrapper";
+import AdminWrapper from "../Pages/admin/AdminWrapper";
 import AddMenu from "../Pages/admin/AddMenu";
 import AdminMenu from "../Pages/admin/AdminMenu";
 import ManageMenu from "../Pages/admin/ManageMenu";
