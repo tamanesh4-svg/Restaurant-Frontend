@@ -151,7 +151,7 @@ const AdminMenu = () => {
 
             {/* ADD MENU */}
             <Link
-              to="/admin/add-menu"
+              to="/admin/addmenu"
               className="inline-flex items-center justify-center gap-2 bg-[#14532D] hover:bg-[#0F3D2E] text-white px-5 py-3 rounded-xl text-sm font-semibold transition"
             >
 
