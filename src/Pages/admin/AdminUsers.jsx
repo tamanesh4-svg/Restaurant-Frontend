@@ -109,20 +109,20 @@ const AdminUsers = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f7]">
+    <div className="min-h-screen bg-[#F1F5F2]">
 
       {/* ================= PAGE HEADER ================= */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
 
           <div className="flex items-center gap-4">
 
-            <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-[#F0FDF4] flex items-center justify-center">
 
               <Users
                 size={25}
-                className="text-orange-500"
+                className="text-[#14532D]"
               />
 
             </div>
@@ -167,7 +167,7 @@ const AdminUsers = () => {
 
             </div>
 
-            <div className="bg-orange-50 text-orange-500 px-4 py-2 rounded-lg text-sm font-semibold">
+            <div className="bg-[#F0FDF4] text-[#14532D] px-4 py-2 rounded-lg text-sm font-semibold">
               {users.length} Users
             </div>
 
@@ -181,7 +181,7 @@ const AdminUsers = () => {
 
           <div className="flex items-center justify-center py-24">
 
-            <div className="w-10 h-10 border-4 border-orange-100 border-t-orange-500 rounded-full animate-spin"></div>
+            <div className="w-10 h-10 border-4 border-[#F0FDF4] border-t-[#14532D] rounded-full animate-spin"></div>
 
           </div>
 
@@ -220,13 +220,13 @@ const AdminUsers = () => {
           !error &&
           users.length === 0 && (
 
-            <div className="bg-white rounded-2xl border border-gray-100 p-12 text-center">
+            <div className="bg-white rounded-2xl border border-[#DDE5DF] p-12 text-center">
 
-              <div className="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full bg-[#F0FDF4] flex items-center justify-center mx-auto mb-4">
 
                 <Users
                   size={28}
-                  className="text-orange-400"
+                  className="text-[#14532D]"
                 />
 
               </div>
@@ -249,7 +249,7 @@ const AdminUsers = () => {
           !error &&
           users.length > 0 && (
 
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div className="bg-white rounded-2xl border border-[#DDE5DF] shadow-sm overflow-hidden">
 
               {/* DESKTOP TABLE */}
               <div className="hidden md:block overflow-x-auto">
@@ -258,7 +258,7 @@ const AdminUsers = () => {
 
                   <thead>
 
-                    <tr className="bg-gray-50 border-b border-gray-100">
+                    <tr className="bg-[#F1F5F2] border-b border-[#DDE5DF]">
 
                       <th className="text-left px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">
                         User
@@ -289,13 +289,13 @@ const AdminUsers = () => {
                   </thead>
 
 
-                  <tbody className="divide-y divide-gray-100">
+                  <tbody className="divide-y divide-[#DDE5DF]">
 
                     {users.map((user) => (
 
                       <tr
                         key={user._id}
-                        className="hover:bg-gray-50/70 transition"
+                        className="hover:bg-[#F1F5F2] transition"
                       >
 
                         {/* USER */}
@@ -303,11 +303,11 @@ const AdminUsers = () => {
 
                           <div className="flex items-center gap-3">
 
-                            <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center flex-shrink-0">
+                            <div className="w-10 h-10 rounded-full bg-[#F0FDF4] flex items-center justify-center flex-shrink-0">
 
                               <User
                                 size={18}
-                                className="text-orange-500"
+                                className="text-[#14532D]"
                               />
 
                             </div>
@@ -368,7 +368,7 @@ const AdminUsers = () => {
 
                           {user.role === "admin" ? (
 
-                            <span className="inline-flex items-center gap-1.5 bg-orange-50 text-orange-600 border border-orange-100 px-3 py-1.5 rounded-full text-xs font-semibold">
+                            <span className="inline-flex items-center gap-1.5 bg-[#F0FDF4] text-[#14532D] border border-[#DDE5DF] px-3 py-1.5 rounded-full text-xs font-semibold">
 
                               <Shield size={13} />
 
@@ -378,7 +378,7 @@ const AdminUsers = () => {
 
                           ) : (
 
-                            <span className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-600 border border-blue-100 px-3 py-1.5 rounded-full text-xs font-semibold">
+                            <span className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-600 border border-gray-200 px-3 py-1.5 rounded-full text-xs font-semibold">
 
                               <User size={13} />
 
@@ -440,7 +440,7 @@ const AdminUsers = () => {
 
 
               {/* ================= MOBILE CARDS ================= */}
-              <div className="md:hidden divide-y divide-gray-100">
+              <div className="md:hidden divide-y divide-[#DDE5DF]">
 
                 {users.map((user) => (
 
@@ -453,11 +453,11 @@ const AdminUsers = () => {
 
                       <div className="flex items-center gap-3">
 
-                        <div className="w-11 h-11 rounded-full bg-orange-50 flex items-center justify-center">
+                        <div className="w-11 h-11 rounded-full bg-[#F0FDF4] flex items-center justify-center">
 
                           <User
                             size={19}
-                            className="text-orange-500"
+                            className="text-[#14532D]"
                           />
 
                         </div>
@@ -543,7 +543,7 @@ const AdminUsers = () => {
 
                       {user.role === "admin" ? (
 
-                        <span className="inline-flex items-center gap-1.5 bg-orange-50 text-orange-600 border border-orange-100 px-3 py-1.5 rounded-full text-xs font-semibold">
+                        <span className="inline-flex items-center gap-1.5 bg-[#F0FDF4] text-[#14532D] border border-[#DDE5DF] px-3 py-1.5 rounded-full text-xs font-semibold">
 
                           <Shield size={13} />
 
@@ -553,7 +553,7 @@ const AdminUsers = () => {
 
                       ) : (
 
-                        <span className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-600 border border-blue-100 px-3 py-1.5 rounded-full text-xs font-semibold">
+                        <span className="inline-flex items-center gap-1.5 bg-gray-50 text-gray-600 border border-gray-200 px-3 py-1.5 rounded-full text-xs font-semibold">
 
                           <User size={13} />
 

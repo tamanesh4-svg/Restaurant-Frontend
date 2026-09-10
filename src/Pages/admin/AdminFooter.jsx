@@ -1,98 +1,74 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Utensils, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Utensils, Mail, MapPin, Phone } from "lucide-react";
 
-const AdminFooter = () => {
+const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 mt-10">
+    <footer className="bg-[#1F2937] text-gray-300">
 
       {/* ================= MAIN FOOTER ================= */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          {/* ================= BRAND ================= */}
+          {/* BRAND */}
           <div>
 
             <Link
-              to="/admin/dashboard"
-              className="inline-flex items-center gap-3 mb-5"
+              to="/"
+              className="text-2xl font-bold tracking-tight text-white"
             >
-              <div className="bg-orange-500 p-2.5 rounded-xl">
-                <Utensils
-                  className="text-white"
-                  size={21}
-                />
-              </div>
-
-              <span className="text-2xl font-bold text-gray-800">
-                Rest<span className="text-orange-500">Taste</span>
-              </span>
+              Tasty<span className="text-[#166534]">Bites</span>
             </Link>
 
-            <p className="text-gray-500 text-sm leading-6 max-w-sm">
-              Manage your restaurant efficiently with RestTaste.
-              Keep your menu and users organized in one convenient place.
+            <p className="text-gray-400 text-sm leading-relaxed mt-4 max-w-xs">
+              Delicious food, made with care. Explore our menu and discover
+              something you'll love.
             </p>
 
-            <p className="text-xs text-gray-400 mt-5">
-              Restaurant Management System
-            </p>
+            <div className="flex items-center gap-2 mt-5 text-sm text-gray-400">
+              <Utensils size={16} className="text-orange-500" />
+              <span>Good food. Great taste.</span>
+            </div>
 
           </div>
 
 
-          {/* ================= QUICK LINKS ================= */}
+          {/* QUICK LINKS */}
           <div>
 
-            <h3 className="text-gray-800 font-semibold text-base mb-5">
+            <h3 className="text-white font-semibold mb-4">
               Quick Links
             </h3>
 
-            <div className="grid grid-cols-2 gap-y-3 text-sm">
+            <div className="flex flex-col gap-3 text-sm">
 
               <Link
-                to="/admin/dashboard"
-                className="group flex items-center gap-2 text-gray-500 hover:text-orange-500 transition"
+                to="/"
+                className="hover:text-orange-500 transition"
               >
-                Dashboard
-                <ArrowRight
-                  size={14}
-                  className="opacity-0 group-hover:opacity-100 transition"
-                />
+                Home
               </Link>
 
               <Link
-                to="/admin/menu"
-                className="group flex items-center gap-2 text-gray-500 hover:text-orange-500 transition"
+                to="/menu"
+                className="hover:text-orange-500 transition"
               >
-                Manage Menu
-                <ArrowRight
-                  size={14}
-                  className="opacity-0 group-hover:opacity-100 transition"
-                />
+                Menu
               </Link>
 
               <Link
-                to="/admin/addmenu"
-                className="group flex items-center gap-2 text-gray-500 hover:text-orange-500 transition"
+                to="/login"
+                className="hover:text-orange-500 transition"
               >
-                Add Menu Item
-                <ArrowRight
-                  size={14}
-                  className="opacity-0 group-hover:opacity-100 transition"
-                />
+                Login
               </Link>
 
               <Link
-                to="/admin/users"
-                className="group flex items-center gap-2 text-gray-500 hover:text-orange-500 transition"
+                to="/register"
+                className="hover:text-orange-500 transition"
               >
-                Manage Users
-                <ArrowRight
-                  size={14}
-                  className="opacity-0 group-hover:opacity-100 transition"
-                />
+                Sign Up
               </Link>
 
             </div>
@@ -100,76 +76,89 @@ const AdminFooter = () => {
           </div>
 
 
-          {/* ================= CONTACT ================= */}
+          {/* CATEGORIES */}
           <div>
 
-            <h3 className="text-gray-800 font-semibold text-base mb-5">
+            <h3 className="text-white font-semibold mb-4">
+              Menu Categories
+            </h3>
+
+            <div className="flex flex-col gap-3 text-sm">
+
+              <Link
+                to="/menu?category=Starter"
+                className="hover:text-orange-500 transition"
+              >
+                Starters
+              </Link>
+
+              <Link
+                to="/menu?category=Main Course"
+                className="hover:text-orange-500 transition"
+              >
+                Main Course
+              </Link>
+
+              <Link
+                to="/menu?category=Dessert"
+                className="hover:text-orange-500 transition"
+              >
+                Desserts
+              </Link>
+
+              <Link
+                to="/menu?category=Beverage"
+                className="hover:text-orange-500 transition"
+              >
+                Beverages
+              </Link>
+
+            </div>
+
+          </div>
+
+
+          {/* CONTACT */}
+          <div>
+
+            <h3 className="text-white font-semibold mb-4">
               Contact Us
             </h3>
 
-            <div className="space-y-4 text-sm">
+            <div className="flex flex-col gap-4 text-sm">
 
-              {/* Location */}
-              <div className="flex items-start gap-3 text-gray-500">
+              <div className="flex items-start gap-3">
+                <MapPin
+                  size={17}
+                  className="text-orange-500 mt-0.5 flex-shrink-0"
+                />
 
-                <div className="bg-orange-50 p-2 rounded-lg">
-                  <MapPin
-                    size={16}
-                    className="text-orange-500"
-                  />
-                </div>
-
-                <div>
-                  <p className="text-gray-700 font-medium">
-                    Location
-                  </p>
-
-                  <p className="mt-0.5">
-                    Kolkata, India
-                  </p>
-                </div>
-
+                <span>
+                  Kolkata, West Bengal
+                </span>
               </div>
 
-
-              {/* Email */}
-              <a
-                href="mailto:support@resttaste.com"
-                className="flex items-center gap-3 text-gray-500 hover:text-orange-500 transition"
-              >
-
-                <div className="bg-orange-50 p-2 rounded-lg">
-                  <Mail
-                    size={16}
-                    className="text-orange-500"
-                  />
-                </div>
+              <div className="flex items-center gap-3">
+                <Phone
+                  size={17}
+                  className="text-orange-500"
+                />
 
                 <span>
-                  support@resttaste.com
+                  +91 9832972869
                 </span>
+              </div>
 
-              </a>
-
-
-              {/* Phone */}
-              <a
-                href="tel:+919876543210"
-                className="flex items-center gap-3 text-gray-500 hover:text-orange-500 transition"
-              >
-
-                <div className="bg-orange-50 p-2 rounded-lg">
-                  <Phone
-                    size={16}
-                    className="text-orange-500"
-                  />
-                </div>
+              <div className="flex items-center gap-3">
+                <Mail
+                  size={17}
+                  className="text-orange-500"
+                />
 
                 <span>
-                  +91 98765 43210
+                  restaste@gmail.com
                 </span>
-
-              </a>
+              </div>
 
             </div>
 
@@ -181,18 +170,14 @@ const AdminFooter = () => {
 
 
       {/* ================= COPYRIGHT ================= */}
-      <div className="border-t border-gray-200">
+      <div className="border-t border-gray-700">
 
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-5">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-5">
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-500">
 
-            <p className="text-sm text-gray-500">
+            <p>
               © {new Date().getFullYear()} RestTaste. All rights reserved.
-            </p>
-
-            <p className="text-xs text-gray-400">
-              Admin Panel
             </p>
 
           </div>
@@ -205,4 +190,4 @@ const AdminFooter = () => {
   );
 };
 
-export default AdminFooter;
+export default Footer;

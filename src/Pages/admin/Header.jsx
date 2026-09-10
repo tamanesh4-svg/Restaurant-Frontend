@@ -46,7 +46,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <nav className="bg-white border-b border-[#DDE5DF] sticky top-0 z-50">
 
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
@@ -54,12 +54,12 @@ const Header = () => {
 
           {/* ================= LOGO ================= */}
           <Link
-            to="/admin"
+            to="/admin/dashboard"
             className="flex items-center gap-2.5"
             onClick={() => setMobileOpen(false)}
           >
 
-            <div className="w-9 h-9 bg-orange-500 rounded-xl flex items-center justify-center">
+            <div className="w-9 h-9 bg-[#14532D] rounded-xl flex items-center justify-center">
               <ChefHat
                 size={21}
                 className="text-white"
@@ -68,11 +68,14 @@ const Header = () => {
 
             <div className="flex flex-col leading-none">
 
-              <span className="text-lg font-bold text-gray-900">
-                RestTaste
-              </span>
-
-              <span className="text-[10px] text-orange-500 font-semibold uppercase tracking-wider mt-1">
+             <Link
+    to="/admin/dashboard"
+    onClick={() => setIsOpen(false)}
+    className="text-2xl font-bold tracking-tight text-gray-900"
+>
+    Tasty<span className="text-[#166534]">Bites</span>
+</Link>
+              <span className="text-[10px] text-[#D4A017] font-semibold uppercase tracking-wider mt-1">
                 Admin Panel
               </span>
 
@@ -96,8 +99,8 @@ const Header = () => {
                   className={({ isActive }) =>
                     `flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
                       isActive
-                        ? "bg-orange-50 text-orange-500"
-                        : "text-gray-600 hover:bg-gray-50 hover:text-orange-500"
+                        ? "bg-[#F0FDF4] text-[#14532D]"
+                        : "text-gray-600 hover:bg-[#F1F5F2] hover:text-[#14532D]"
                     }`
                   }
                 >
@@ -117,12 +120,12 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-4">
 
             {/* Admin Badge */}
-            <div className="flex items-center gap-2 bg-gray-50 px-3 py-2 rounded-lg">
+            <div className="flex items-center gap-2 bg-[#F1F5F2] px-3 py-2 rounded-lg">
 
-              <div className="w-7 h-7 bg-orange-100 rounded-full flex items-center justify-center">
+              <div className="w-7 h-7 bg-[#F0FDF4] rounded-full flex items-center justify-center">
                 <ChefHat
                   size={15}
-                  className="text-orange-500"
+                  className="text-[#14532D]"
                 />
               </div>
 
@@ -156,7 +159,7 @@ const Header = () => {
           {/* ================= MOBILE BUTTON ================= */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-50 transition"
+            className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-[#F1F5F2] transition"
           >
             {mobileOpen ? (
               <X size={23} />
@@ -171,7 +174,7 @@ const Header = () => {
         {/* ================= MOBILE MENU ================= */}
         {mobileOpen && (
 
-          <div className="md:hidden border-t border-gray-100 py-4">
+          <div className="md:hidden border-t border-[#DDE5DF] py-4">
 
             <div className="flex flex-col gap-1">
 
@@ -188,8 +191,8 @@ const Header = () => {
                     className={({ isActive }) =>
                       `flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition ${
                         isActive
-                          ? "bg-orange-50 text-orange-500"
-                          : "text-gray-600 hover:bg-gray-50"
+                          ? "bg-[#F0FDF4] text-[#14532D]"
+                          : "text-gray-600 hover:bg-[#F1F5F2]"
                       }`
                     }
                   >
@@ -204,14 +207,14 @@ const Header = () => {
 
 
               {/* Mobile Admin Info */}
-              <div className="border-t border-gray-100 mt-3 pt-3">
+              <div className="border-t border-[#DDE5DF] mt-3 pt-3">
 
                 <div className="flex items-center gap-3 px-4 py-3">
 
-                  <div className="w-9 h-9 bg-orange-100 rounded-full flex items-center justify-center">
+                  <div className="w-9 h-9 bg-[#F0FDF4] rounded-full flex items-center justify-center">
                     <ChefHat
                       size={18}
-                      className="text-orange-500"
+                      className="text-[#14532D]"
                     />
                   </div>
 

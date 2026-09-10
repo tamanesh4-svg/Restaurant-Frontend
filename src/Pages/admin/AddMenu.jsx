@@ -145,16 +145,16 @@ const AddMenu = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f7]">
+    <div className="min-h-screen bg-[#F1F5F2]">
 
       {/* ================= PAGE HEADER ================= */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
 
           <Link
             to="/admin/addmenu"
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-orange-500 transition mb-5"
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#14532D] transition mb-5"
           >
             <ArrowLeft size={17} />
             Back to Menu
@@ -162,10 +162,10 @@ const AddMenu = () => {
 
           <div className="flex items-center gap-4">
 
-            <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-[#F0FDF4] flex items-center justify-center">
               <Utensils
                 size={24}
-                className="text-orange-500"
+                className="text-[#14532D]"
               />
             </div>
 
@@ -191,7 +191,7 @@ const AddMenu = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
+          className="bg-white rounded-2xl border border-[#DDE5DF] shadow-sm overflow-hidden"
         >
 
           <div className="p-6 sm:p-8">
@@ -214,7 +214,7 @@ const AddMenu = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Chicken Biryani"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                   />
                 </div>
 
@@ -231,7 +231,7 @@ const AddMenu = () => {
                     onChange={handleChange}
                     rows="5"
                     placeholder="Describe the dish..."
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none resize-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none resize-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                   />
                 </div>
 
@@ -246,7 +246,7 @@ const AddMenu = () => {
                     name="category"
                     value={formData.category}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                   >
 
                     <option value="">
@@ -284,7 +284,7 @@ const AddMenu = () => {
 
                     <div className="relative">
 
-                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#D4A017]">
                         ₹
                       </span>
 
@@ -296,7 +296,7 @@ const AddMenu = () => {
                         min="0"
                         step="0.01"
                         placeholder="0.00"
-                        className="w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                        className="w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                       />
 
                     </div>
@@ -312,7 +312,7 @@ const AddMenu = () => {
                     <select
                       value={formData.availability}
                       onChange={handleAvailability}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                     >
 
                       <option value="true">
@@ -342,14 +342,14 @@ const AddMenu = () => {
 
                   <label
                     htmlFor="image"
-                    className="border-2 border-dashed border-gray-200 rounded-2xl h-80 flex flex-col items-center justify-center cursor-pointer hover:border-orange-300 hover:bg-orange-50/30 transition"
+                    className="border-2 border-dashed border-gray-200 rounded-2xl h-80 flex flex-col items-center justify-center cursor-pointer hover:border-[#14532D] hover:bg-[#F0FDF4] transition"
                   >
 
-                    <div className="w-14 h-14 rounded-xl bg-orange-50 flex items-center justify-center mb-4">
+                    <div className="w-14 h-14 rounded-xl bg-[#F0FDF4] flex items-center justify-center mb-4">
 
                       <Upload
                         size={25}
-                        className="text-orange-500"
+                        className="text-[#14532D]"
                       />
 
                     </div>
@@ -418,7 +418,7 @@ const AddMenu = () => {
 
 
           {/* ================= FORM FOOTER ================= */}
-          <div className="border-t border-gray-100 bg-gray-50/70 px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="border-t border-[#DDE5DF] bg-[#F1F5F2] px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
             <p className="text-xs text-gray-400">
               All fields are required except availability.
@@ -436,7 +436,7 @@ const AddMenu = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white text-sm font-semibold transition"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#14532D] hover:bg-[#0F3D2E] disabled:bg-[#A7B8AE] text-white text-sm font-semibold transition"
               >
 
                 {loading ? (

@@ -18,7 +18,7 @@ const MenuDetails = () => {
         setError("");
 
         const response = await axios.get(
-           `${import.meta.env.VITE_SERVER_URL}/user/menuitems/${id}`,
+          `${import.meta.env.VITE_SERVER_URL}/user/menuitems/${id}`,
         );
 
         if (response.data.success) {
@@ -40,8 +40,8 @@ const MenuDetails = () => {
   // ================= LOADING =================
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#faf9f7] flex items-center justify-center">
-        <div className="w-10 h-10 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin"></div>
+      <div className="min-h-screen bg-[#F6F5EF] flex items-center justify-center">
+        <div className="w-10 h-10 border-4 border-[#D4A017]/30 border-t-[#166534] rounded-full animate-spin"></div>
       </div>
     );
   }
@@ -49,7 +49,7 @@ const MenuDetails = () => {
   // ================= ERROR =================
   if (error || !item) {
     return (
-      <div className="min-h-screen bg-[#faf9f7] flex flex-col items-center justify-center px-5">
+      <div className="min-h-screen bg-[#F6F5EF] flex flex-col items-center justify-center px-5">
 
         <Utensils
           size={50}
@@ -66,7 +66,7 @@ const MenuDetails = () => {
 
         <Link
           to="/menu"
-          className="mt-6 inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2.5 rounded-lg hover:bg-orange-600 transition"
+          className="mt-6 inline-flex items-center gap-2 bg-[#166534] text-white px-5 py-2.5 rounded-lg hover:bg-[#14532D] transition"
         >
           <ArrowLeft size={18} />
           Back to Menu
@@ -77,7 +77,7 @@ const MenuDetails = () => {
   }
 
   return (
-    <div className="bg-[#faf9f7] min-h-screen text-gray-900">
+    <div className="bg-[#F6F5EF] min-h-screen text-gray-900">
 
       {/* ================= MAIN ================= */}
       <section className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-10">
@@ -85,7 +85,7 @@ const MenuDetails = () => {
         {/* Back Button */}
         <Link
           to="/menu"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-orange-500 transition mb-8"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-[#166534] transition mb-8"
         >
           <ArrowLeft size={18} />
           Back to Menu
@@ -98,7 +98,7 @@ const MenuDetails = () => {
           <div className="grid md:grid-cols-2">
 
             {/* ================= IMAGE ================= */}
-            <div className="h-80 md:h-[500px] bg-orange-50">
+            <div className="h-80 md:h-[500px] bg-[#F0FDF4]">
 
               {item.image?.url ? (
                 <img
@@ -110,7 +110,7 @@ const MenuDetails = () => {
                 <div className="w-full h-full flex items-center justify-center">
                   <Utensils
                     size={70}
-                    className="text-orange-400"
+                    className="text-[#166534]"
                   />
                 </div>
               )}
@@ -122,7 +122,7 @@ const MenuDetails = () => {
             <div className="p-7 sm:p-10 flex flex-col justify-center">
 
               {/* Category */}
-              <span className="self-start bg-orange-50 text-orange-500 text-sm font-semibold px-4 py-2 rounded-full">
+              <span className="self-start bg-[#F0FDF4] text-[#166534] text-sm font-semibold px-4 py-2 rounded-full">
                 {item.category}
               </span>
 
@@ -146,7 +146,7 @@ const MenuDetails = () => {
                   Price
                 </p>
 
-                <p className="text-3xl font-bold text-orange-500 mt-1">
+                <p className="text-3xl font-bold text-[#D4A017] mt-1">
                   ₹{item.price}
                 </p>
 
@@ -174,7 +174,7 @@ const MenuDetails = () => {
               {/* Back Button */}
               <Link
                 to="/menu"
-                className="mt-8 inline-flex items-center justify-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-xl font-medium hover:bg-orange-600 transition"
+                className="mt-8 inline-flex items-center justify-center gap-2 bg-[#166534] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#14532D] transition"
               >
                 <ArrowLeft size={18} />
                 Explore More Dishes

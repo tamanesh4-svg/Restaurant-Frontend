@@ -4,7 +4,7 @@ import { Utensils, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-[#1F2937] text-gray-300">
 
       {/* ================= MAIN FOOTER ================= */}
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12">
@@ -18,7 +18,7 @@ const Footer = () => {
               to="/"
               className="text-2xl font-bold tracking-tight text-white"
             >
-              Rest<span className="text-orange-500">Taste</span>
+              Tasty<span className="text-[#166534]">Bites</span>
             </Link>
 
             <p className="text-gray-400 text-sm leading-relaxed mt-4 max-w-xs">
@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-2 mt-5 text-sm text-gray-400">
-              <Utensils size={16} className="text-orange-500" />
+              <Utensils size={16} className="text-[#D4A017]" />
               <span>Good food. Great taste.</span>
             </div>
 
@@ -45,28 +45,28 @@ const Footer = () => {
 
               <Link
                 to="/"
-                className="hover:text-orange-500 transition"
+                className="hover:text-[#D4A017] transition"
               >
                 Home
               </Link>
 
               <Link
                 to="/menu"
-                className="hover:text-orange-500 transition"
+                className="hover:text-[#D4A017] transition"
               >
                 Menu
               </Link>
 
               <Link
                 to="/login"
-                className="hover:text-orange-500 transition"
+                className="hover:text-[#D4A017] transition"
               >
                 Login
               </Link>
 
               <Link
                 to="/register"
-                className="hover:text-orange-500 transition"
+                className="hover:text-[#D4A017] transition"
               >
                 Sign Up
               </Link>
@@ -87,28 +87,28 @@ const Footer = () => {
 
               <Link
                 to="/menu?category=Starter"
-                className="hover:text-orange-500 transition"
+                className="hover:text-[#D4A017] transition"
               >
                 Starters
               </Link>
 
               <Link
                 to="/menu?category=Main Course"
-                className="hover:text-orange-500 transition"
+                className="hover:text-[#D4A017] transition"
               >
                 Main Course
               </Link>
 
               <Link
                 to="/menu?category=Dessert"
-                className="hover:text-orange-500 transition"
+                className="hover:text-[#D4A017] transition"
               >
                 Desserts
               </Link>
 
               <Link
                 to="/menu?category=Beverage"
-                className="hover:text-orange-500 transition"
+                className="hover:text-[#D4A017] transition"
               >
                 Beverages
               </Link>
@@ -130,7 +130,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin
                   size={17}
-                  className="text-orange-500 mt-0.5 flex-shrink-0"
+                  className="text-[#D4A017] mt-0.5 flex-shrink-0"
                 />
 
                 <span>
@@ -141,7 +141,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Phone
                   size={17}
-                  className="text-orange-500"
+                  className="text-[#D4A017]"
                 />
 
                 <span>
@@ -152,7 +152,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Mail
                   size={17}
-                  className="text-orange-500"
+                  className="text-[#D4A017]"
                 />
 
                 <span>
@@ -170,7 +170,7 @@ const Footer = () => {
 
 
       {/* ================= COPYRIGHT ================= */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-gray-700">
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-5">
 
@@ -179,8 +179,6 @@ const Footer = () => {
             <p>
               © {new Date().getFullYear()} RestTaste. All rights reserved.
             </p>
-
-            
 
           </div>
 

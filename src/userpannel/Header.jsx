@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { Menu, X, LogOut } from "lucide-react";
 import { useState } from "react";
 import Cookies from "js-cookie";
@@ -9,15 +9,22 @@ const Navbar = () => {
 
     const token = Cookies.get("token");
 
-    const handleLogout = () => { 
-    Cookies.remove("token"); 
-    Cookies.remove("role"); 
-    Cookies.remove("userDetails");
-    
-    setIsOpen(false); 
-    navigate("/");
-    window.location.reload();
-};
+    const handleLogout = () => {
+        Cookies.remove("token");
+        Cookies.remove("role");
+        Cookies.remove("userDetails");
+
+        setIsOpen(false);
+        navigate("/");
+        window.location.reload();
+    };
+
+    const navLinkClass = ({ isActive }) =>
+        `transition-colors duration-200 ${
+            isActive
+                ? "text-[#166534] font-bold"
+                : "text-gray-700 hover:text-[#166534]"
+        }`;
 
     return (
         <header className="w-full bg-white border-b border-gray-200">
@@ -31,39 +38,51 @@ const Navbar = () => {
                         onClick={() => setIsOpen(false)}
                         className="text-2xl font-bold tracking-tight text-gray-900"
                     >
-                        Rest<span className="text-orange-500">Taste</span>
+                        Tasty<span className="text-[#166534]">Taste</span>
                     </Link>
+
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8">
 
-                        <Link
+                        {/* Home */}
+                        <NavLink
                             to="/"
-                            className="text-gray-700 hover:text-orange-500 transition-colors duration-200"
+                            end
+                            className={navLinkClass}
                         >
                             Home
-                        </Link>
+                        </NavLink>
+
 
                         {!token ? (
                             <>
-                                <Link
+                                {/* Login */}
+                                <NavLink
                                     to="/login"
-                                    className="text-gray-700 hover:text-orange-500 transition-colors duration-200"
+                                    className={navLinkClass}
                                 >
                                     Login
-                                </Link>
+                                </NavLink>
 
-                                <Link
+                                {/* Sign Up */}
+                                <NavLink
                                     to="/register"
-                                    className="px-5 py-2.5 rounded-lg bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors duration-200"
+                                    className={({ isActive }) =>
+                                        `px-5 py-2.5 rounded-lg bg-[#166534] text-white transition-colors duration-200 ${
+                                            isActive
+                                                ? "font-bold"
+                                                : "font-medium"
+                                        } hover:bg-[#14532D]`
+                                    }
                                 >
-                                    Sign In
-                                </Link>
+                                    Sign Up
+                                </NavLink>
                             </>
                         ) : (
                             <button
                                 onClick={handleLogout}
-                                className="text-gray-700 hover:text-orange-500 transition-colors duration-200"
+                                className="text-gray-700 hover:text-[#166534] transition-colors duration-200"
                                 title="Logout"
                             >
                                 <LogOut size={20} />
@@ -72,10 +91,11 @@ const Navbar = () => {
 
                     </div>
 
+
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden p-2 text-gray-700 hover:text-orange-500"
+                        className="md:hidden p-2 text-gray-700 hover:text-[#166534]"
                     >
                         {isOpen ? (
                             <X size={26} />
@@ -83,7 +103,9 @@ const Navbar = () => {
                             <Menu size={26} />
                         )}
                     </button>
+
                 </div>
+
 
                 {/* Mobile Navigation */}
                 {isOpen && (
@@ -91,36 +113,47 @@ const Navbar = () => {
 
                         <div className="flex flex-col gap-4">
 
-                            <Link
+                            {/* Home */}
+                            <NavLink
                                 to="/"
+                                end
                                 onClick={() => setIsOpen(false)}
-                                className="text-gray-700 hover:text-orange-500 transition-colors"
+                                className={navLinkClass}
                             >
                                 Home
-                            </Link>
+                            </NavLink>
+
 
                             {!token ? (
                                 <>
-                                    <Link
+                                    {/* Login */}
+                                    <NavLink
                                         to="/login"
                                         onClick={() => setIsOpen(false)}
-                                        className="text-gray-700 hover:text-orange-500 transition-colors"
+                                        className={navLinkClass}
                                     >
                                         Login
-                                    </Link>
+                                    </NavLink>
 
-                                    <Link
+                                    {/* Sign Up */}
+                                    <NavLink
                                         to="/register"
                                         onClick={() => setIsOpen(false)}
-                                        className="w-fit px-5 py-2.5 rounded-lg bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors"
+                                        className={({ isActive }) =>
+                                            `w-fit px-5 py-2.5 rounded-lg bg-[#166534] text-white transition-colors ${
+                                                isActive
+                                                    ? "font-bold"
+                                                    : "font-medium"
+                                            } hover:bg-[#14532D]`
+                                        }
                                     >
-                                        Sign In
-                                    </Link>
+                                        Sign Up
+                                    </NavLink>
                                 </>
                             ) : (
                                 <button
                                     onClick={handleLogout}
-                                    className="w-fit p-2 text-gray-700 hover:text-orange-500 transition-colors"
+                                    className="w-fit p-2 text-gray-700 hover:text-[#166534] transition-colors"
                                     title="Logout"
                                 >
                                     <LogOut size={21} />
@@ -128,6 +161,7 @@ const Navbar = () => {
                             )}
 
                         </div>
+
                     </div>
                 )}
 

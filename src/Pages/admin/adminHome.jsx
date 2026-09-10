@@ -108,10 +108,10 @@ const AdminHome = () => {
   }, []);
 
   return (
-    <div className="bg-[#faf9f7]">
+    <div className="bg-[#F1F5F2]">
 
       {/* ================= HEADER ================= */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-10">
 
@@ -119,7 +119,7 @@ const AdminHome = () => {
 
             <div>
 
-              <div className="inline-flex items-center gap-2 bg-orange-50 text-orange-500 px-3 py-1.5 rounded-full text-xs font-semibold mb-4">
+              <div className="inline-flex items-center gap-2 bg-[#F0FDF4] text-[#14532D] px-3 py-1.5 rounded-full text-xs font-semibold mb-4">
 
                 <ChefHat size={15} />
 
@@ -143,7 +143,7 @@ const AdminHome = () => {
 
             <Link
               to="/admin/addmenu"
-              className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl font-medium transition"
+              className="inline-flex items-center justify-center gap-2 bg-[#14532D] hover:bg-[#0F3D2E] text-white px-5 py-3 rounded-xl font-medium transition"
             >
 
               <Plus size={18} />
@@ -182,7 +182,7 @@ const AdminHome = () => {
 
 
           {/* TOTAL MENU ITEMS */}
-          <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div className="bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm">
 
             <div className="flex items-center justify-between">
 
@@ -211,11 +211,11 @@ const AdminHome = () => {
               </div>
 
 
-              <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-[#F0FDF4] flex items-center justify-center">
 
                 <Utensils
                   size={24}
-                  className="text-orange-500"
+                  className="text-[#14532D]"
                 />
 
               </div>
@@ -226,7 +226,7 @@ const AdminHome = () => {
 
 
           {/* REGISTERED USERS */}
-          <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div className="bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm">
 
             <div className="flex items-center justify-between">
 
@@ -255,11 +255,11 @@ const AdminHome = () => {
               </div>
 
 
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-[#F0FDF4] flex items-center justify-center">
 
                 <Users
                   size={24}
-                  className="text-blue-500"
+                  className="text-[#14532D]"
                 />
 
               </div>
@@ -270,7 +270,7 @@ const AdminHome = () => {
 
 
           {/* UNAVAILABLE ITEMS */}
-          <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+          <div className="bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm">
 
             <div className="flex items-center justify-between">
 
@@ -335,14 +335,14 @@ const AdminHome = () => {
           {/* MANAGE MENU */}
           <Link
             to="/admin/menu"
-            className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition"
+            className="group bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm hover:shadow-md transition"
           >
 
-            <div className="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center mb-5">
+            <div className="w-11 h-11 rounded-xl bg-[#F0FDF4] flex items-center justify-center mb-5">
 
               <Utensils
                 size={22}
-                className="text-orange-500"
+                className="text-[#14532D]"
               />
 
             </div>
@@ -363,7 +363,7 @@ const AdminHome = () => {
 
               <ArrowRight
                 size={18}
-                className="text-gray-300 group-hover:text-orange-500 group-hover:translate-x-1 transition"
+                className="text-gray-300 group-hover:text-[#14532D] group-hover:translate-x-1 transition"
               />
 
             </div>
@@ -374,14 +374,14 @@ const AdminHome = () => {
           {/* MANAGE USERS */}
           <Link
             to="/admin/users"
-            className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition"
+            className="group bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm hover:shadow-md transition"
           >
 
-            <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
+            <div className="w-11 h-11 rounded-xl bg-[#F0FDF4] flex items-center justify-center mb-5">
 
               <Users
                 size={22}
-                className="text-blue-500"
+                className="text-[#14532D]"
               />
 
             </div>
@@ -402,7 +402,7 @@ const AdminHome = () => {
 
               <ArrowRight
                 size={18}
-                className="text-gray-300 group-hover:text-orange-500 group-hover:translate-x-1 transition"
+                className="text-gray-300 group-hover:text-[#14532D] group-hover:translate-x-1 transition"
               />
 
             </div>
@@ -413,7 +413,7 @@ const AdminHome = () => {
 
 
         {/* ================= BOTTOM INFO ================= */}
-        <div className="bg-orange-500 rounded-2xl p-6 sm:p-8 text-white">
+        <div className="bg-[#14532D] rounded-2xl p-6 sm:p-8 text-white">
 
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
 
@@ -423,7 +423,7 @@ const AdminHome = () => {
                 Keep your menu up to date 🍽️
               </h3>
 
-              <p className="text-orange-100 text-sm mt-2 max-w-xl">
+              <p className="text-green-100 text-sm mt-2 max-w-xl">
                 Make sure your menu items have the correct prices,
                 availability and images so customers always see
                 accurate information.
@@ -435,7 +435,7 @@ const AdminHome = () => {
 
             <Link
               to="/admin/menu"
-              className="inline-flex items-center justify-center gap-2 bg-white text-orange-500 hover:bg-orange-50 px-5 py-3 rounded-xl font-semibold transition whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#14532D] hover:bg-[#F0FDF4] px-5 py-3 rounded-xl font-semibold transition whitespace-nowrap"
             >
 
               Manage Menu

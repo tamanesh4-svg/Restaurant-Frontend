@@ -243,9 +243,9 @@ const ManageMenu = () => {
   if (loading) {
 
     return (
-      <div className="min-h-screen bg-[#faf9f7] flex items-center justify-center">
+      <div className="min-h-screen bg-[#F1F5F2] flex items-center justify-center">
 
-        <div className="w-10 h-10 border-4 border-orange-100 border-t-orange-500 rounded-full animate-spin"></div>
+        <div className="w-10 h-10 border-4 border-[#F0FDF4] border-t-[#14532D] rounded-full animate-spin"></div>
 
       </div>
     );
@@ -255,16 +255,16 @@ const ManageMenu = () => {
 
   return (
 
-    <div className="min-h-screen bg-[#faf9f7]">
+    <div className="min-h-screen bg-[#F1F5F2]">
 
       {/* ================= HEADER ================= */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
 
           <Link
             to="/admin/menu"
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-orange-500 transition mb-5"
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#14532D] transition mb-5"
           >
             <ArrowLeft size={17} />
             Back to Menu
@@ -273,11 +273,11 @@ const ManageMenu = () => {
 
           <div className="flex items-center gap-4">
 
-            <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-[#F0FDF4] flex items-center justify-center">
 
               <Utensils
                 size={24}
-                className="text-orange-500"
+                className="text-[#14532D]"
               />
 
             </div>
@@ -307,7 +307,7 @@ const ManageMenu = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
+          className="bg-white rounded-2xl border border-[#DDE5DF] shadow-sm overflow-hidden"
         >
 
           <div className="p-6 sm:p-8">
@@ -332,7 +332,7 @@ const ManageMenu = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter item name"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                   />
 
                 </div>
@@ -351,7 +351,7 @@ const ManageMenu = () => {
                     onChange={handleChange}
                     rows="5"
                     placeholder="Describe the dish..."
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none resize-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 outline-none resize-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                   />
 
                 </div>
@@ -368,7 +368,7 @@ const ManageMenu = () => {
                     name="category"
                     value={formData.category}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                   >
 
                     <option value="">
@@ -409,7 +409,7 @@ const ManageMenu = () => {
 
                     <div className="relative">
 
-                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#D4A017]">
                         ₹
                       </span>
 
@@ -420,7 +420,7 @@ const ManageMenu = () => {
                         onChange={handleChange}
                         min="0"
                         step="0.01"
-                        className="w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                        className="w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                       />
 
                     </div>
@@ -438,7 +438,7 @@ const ManageMenu = () => {
                     <select
                       value={formData.availability}
                       onChange={handleAvailability}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition"
                     >
 
                       <option value="true">
@@ -467,7 +467,7 @@ const ManageMenu = () => {
 
 
                 {/* IMAGE */}
-                <div className="relative h-80 rounded-2xl overflow-hidden bg-orange-50 border border-gray-100">
+                <div className="relative h-80 rounded-2xl overflow-hidden bg-[#F0FDF4] border border-[#DDE5DF]">
 
                   {preview ? (
 
@@ -491,7 +491,7 @@ const ManageMenu = () => {
 
                       <ImageIcon
                         size={45}
-                        className="text-orange-300"
+                        className="text-[#14532D]/30"
                       />
 
                       <p className="text-sm text-gray-400 mt-3">
@@ -522,7 +522,7 @@ const ManageMenu = () => {
                 {/* UPLOAD BUTTON */}
                 <label
                   htmlFor="newImage"
-                  className="mt-4 flex items-center justify-center gap-2 w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium text-gray-600 hover:border-orange-300 hover:text-orange-500 hover:bg-orange-50/30 cursor-pointer transition"
+                  className="mt-4 flex items-center justify-center gap-2 w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium text-gray-600 hover:border-[#14532D] hover:text-[#14532D] hover:bg-[#F0FDF4] cursor-pointer transition"
                 >
 
                   <Upload size={17} />
@@ -562,7 +562,7 @@ const ManageMenu = () => {
 
 
           {/* ================= FOOTER ================= */}
-          <div className="border-t border-gray-100 bg-gray-50/70 px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="border-t border-[#DDE5DF] bg-[#F1F5F2] px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
             <p className="text-xs text-gray-400">
               Changes will be saved immediately.
@@ -582,7 +582,7 @@ const ManageMenu = () => {
               <button
                 type="submit"
                 disabled={saving}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white text-sm font-semibold transition"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#14532D] hover:bg-[#0F3D2E] disabled:bg-[#A7B8AE] text-white text-sm font-semibold transition"
               >
 
                 {saving ? (

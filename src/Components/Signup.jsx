@@ -104,18 +104,18 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f7] flex items-center justify-center px-4 py-10">
+    <div className="min-h-screen bg-[#F6F5EF] flex items-center justify-center px-4 py-10">
 
       <div className="w-full max-w-md">
 
         {/* Signup Card */}
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 sm:p-8">
+        <div className="bg-white border border-[#DDE5DF] rounded-2xl shadow-sm p-6 sm:p-8">
 
           {/* Icon */}
           <div className="flex justify-center mb-5">
-            <div className="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-[#F0FDF4] flex items-center justify-center">
               <UserPlus
-                className="text-orange-500"
+                className="text-[#166534]"
                 size={24}
               />
             </div>
@@ -129,7 +129,7 @@ const Signup = () => {
 
             <p className="text-gray-500 text-sm mt-2">
               Join{" "}
-              <span className="text-orange-500 font-medium">
+              <span className="text-[#166534] font-medium">
                 RestTaste
               </span>{" "}
               today
@@ -154,7 +154,7 @@ const Signup = () => {
                   error.username
                     ? "border-red-400"
                     : "border-gray-300"
-                } focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-orange-400 transition`}
+                } focus:outline-none focus:ring-2 focus:ring-[#F0FDF4] focus:border-[#166534] transition`}
               />
 
               {error.username && (
@@ -180,7 +180,7 @@ const Signup = () => {
                   error.email
                     ? "border-red-400"
                     : "border-gray-300"
-                } focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-orange-400 transition`}
+                } focus:outline-none focus:ring-2 focus:ring-[#F0FDF4] focus:border-[#166534] transition`}
               />
 
               {error.email && (
@@ -206,7 +206,7 @@ const Signup = () => {
                   error.phone
                     ? "border-red-400"
                     : "border-gray-300"
-                } focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-orange-400 transition`}
+                } focus:outline-none focus:ring-2 focus:ring-[#F0FDF4] focus:border-[#166534] transition`}
               />
 
               {error.phone && (
@@ -232,7 +232,7 @@ const Signup = () => {
                   error.password
                     ? "border-red-400"
                     : "border-gray-300"
-                } focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-orange-400 transition`}
+                } focus:outline-none focus:ring-2 focus:ring-[#F0FDF4] focus:border-[#166534] transition`}
               />
 
               {error.password && (
@@ -258,7 +258,7 @@ const Signup = () => {
                   error.confirmpwd
                     ? "border-red-400"
                     : "border-gray-300"
-                } focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-orange-400 transition`}
+                } focus:outline-none focus:ring-2 focus:ring-[#F0FDF4] focus:border-[#166534] transition`}
               />
 
               {error.confirmpwd && (
@@ -279,7 +279,7 @@ const Signup = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white font-medium py-3 rounded-lg transition duration-200"
+              className="w-full flex items-center justify-center gap-2 bg-[#166534] hover:bg-[#14532D] disabled:bg-[#A7B8AE] text-white font-medium py-3 rounded-lg transition duration-200"
             >
               {isLoading ? (
                 <>
@@ -296,7 +296,7 @@ const Signup = () => {
           </form>
 
           {/* Login */}
-          <div className="text-center mt-6 pt-5 border-t border-gray-100">
+          <div className="text-center mt-6 pt-5 border-t border-[#DDE5DF]">
             <p className="text-sm text-gray-500">
               Already have an account?
             </p>
@@ -304,7 +304,7 @@ const Signup = () => {
             <button
               type="button"
               onClick={() => navigate("/login")}
-              className="mt-2 text-orange-500 font-medium hover:text-orange-600 transition"
+              className="mt-2 text-[#166534] font-medium hover:text-[#14532D] transition"
             >
               Login to your account
             </button>

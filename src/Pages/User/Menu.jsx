@@ -29,7 +29,7 @@ const Menu = () => {
         setError("");
 
         const response = await axios.get(
-           `${import.meta.env.VITE_SERVER_URL}/user/menuitems`,
+          `${import.meta.env.VITE_SERVER_URL}/user/menuitems`,
         );
 
         if (response.data.success) {
@@ -79,14 +79,14 @@ const Menu = () => {
   }, [menuItems, activeCategory, search]);
 
   return (
-    <div className="bg-[#faf9f7] min-h-screen text-gray-900">
+    <div className="bg-[#F6F5EF] min-h-screen text-gray-900">
 
       {/* ================= HEADER ================= */}
       <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-12 pb-8">
 
         <div className="text-center max-w-2xl mx-auto">
 
-          <p className="text-orange-500 text-sm font-semibold uppercase tracking-wider">
+          <p className="text-[#166534] text-sm font-semibold uppercase tracking-wider">
             Our Menu
           </p>
 
@@ -122,7 +122,7 @@ const Menu = () => {
               placeholder="Search for a dish..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-white border border-gray-200 rounded-xl pl-11 pr-4 py-3 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition"
+              className="w-full bg-white border border-gray-200 rounded-xl pl-11 pr-4 py-3 outline-none focus:border-[#166534] focus:ring-2 focus:ring-[#F0FDF4] transition"
             />
 
           </div>
@@ -139,8 +139,8 @@ const Menu = () => {
               onClick={() => setActiveCategory(category)}
               className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition ${
                 activeCategory === category
-                  ? "bg-orange-500 text-white"
-                  : "bg-white border border-gray-200 text-gray-600 hover:border-orange-300 hover:text-orange-500"
+                  ? "bg-[#166534] text-white"
+                  : "bg-white border border-gray-200 text-gray-600 hover:border-[#166534]/40 hover:text-[#166534]"
               }`}
             >
               {category}
@@ -159,7 +159,7 @@ const Menu = () => {
         {loading && (
           <div className="flex justify-center items-center py-20">
 
-            <div className="w-10 h-10 border-4 border-orange-200 border-t-orange-500 rounded-full animate-spin"></div>
+            <div className="w-10 h-10 border-4 border-[#D4A017]/30 border-t-[#166534] rounded-full animate-spin"></div>
 
           </div>
         )}
@@ -175,7 +175,7 @@ const Menu = () => {
 
             <button
               onClick={() => window.location.reload()}
-              className="mt-4 px-5 py-2 bg-orange-500 text-white rounded-lg"
+              className="mt-4 px-5 py-2 bg-[#166534] hover:bg-[#14532D] text-white rounded-lg"
             >
               Try Again
             </button>
@@ -231,10 +231,10 @@ const Menu = () => {
                         className="w-full h-full object-cover hover:scale-105 transition duration-500"
                       />
                     ) : (
-                      <div className="w-full h-full bg-orange-50 flex items-center justify-center">
+                      <div className="w-full h-full bg-[#F0FDF4] flex items-center justify-center">
                         <Utensils
                           size={45}
-                          className="text-orange-400"
+                          className="text-[#166534]"
                         />
                       </div>
                     )}
@@ -276,13 +276,13 @@ const Menu = () => {
                     {/* Bottom */}
                     <div className="flex items-center justify-between mt-5">
 
-                      <p className="text-orange-500 font-bold text-lg">
+                      <p className="text-[#D4A017] font-bold text-lg">
                         ₹{item.price}
                       </p>
 
                       <Link
                         to={`/menu/${item._id}`}
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-700 hover:text-orange-500 transition"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-700 hover:text-[#166534] transition"
                       >
                         View Details
                         <ArrowRight size={16} />

@@ -57,7 +57,7 @@ const Login = () => {
 
       try {
         const response = await axios.post(
-         `${import.meta.env.VITE_SERVER_URL}/auth/login`,
+          `${import.meta.env.VITE_SERVER_URL}/auth/login`,
           formdata
         );
 
@@ -94,17 +94,17 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f7] flex items-center justify-center px-4 py-10">
+    <div className="min-h-screen bg-[#F6F5EF] flex items-center justify-center px-4 py-10">
 
       <div className="w-full max-w-md">
 
         {/* Login Card */}
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 sm:p-8">
+        <div className="bg-white border border-[#DDE5DF] rounded-2xl shadow-sm p-6 sm:p-8">
 
           {/* Icon */}
           <div className="flex justify-center mb-5">
-            <div className="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center">
-              <LogIn className="text-orange-500" size={24} />
+            <div className="w-12 h-12 rounded-full bg-[#F0FDF4] flex items-center justify-center">
+              <LogIn className="text-[#166534]" size={24} />
             </div>
           </div>
 
@@ -116,7 +116,7 @@ const Login = () => {
 
             <p className="text-gray-500 text-sm mt-2">
               Login to continue to{" "}
-              <span className="text-orange-500 font-medium">
+              <span className="text-[#166534] font-medium">
                 RestTaste
               </span>
             </p>
@@ -140,7 +140,7 @@ const Login = () => {
                   error.email
                     ? "border-red-400"
                     : "border-gray-300"
-                } focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-orange-400 transition`}
+                } focus:outline-none focus:ring-2 focus:ring-[#F0FDF4] focus:border-[#166534] transition`}
               />
 
               {error.email && (
@@ -166,7 +166,7 @@ const Login = () => {
                   error.password
                     ? "border-red-400"
                     : "border-gray-300"
-                } focus:outline-none focus:ring-2 focus:ring-orange-100 focus:border-orange-400 transition`}
+                } focus:outline-none focus:ring-2 focus:ring-[#F0FDF4] focus:border-[#166534] transition`}
               />
 
               {error.password && (
@@ -187,7 +187,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white font-medium py-3 rounded-lg transition duration-200"
+              className="w-full flex items-center justify-center gap-2 bg-[#166534] hover:bg-[#14532D] disabled:bg-[#A7B8AE] text-white font-medium py-3 rounded-lg transition duration-200"
             >
               {isLoading ? (
                 <>
@@ -201,7 +201,7 @@ const Login = () => {
           </form>
 
           {/* Signup */}
-          <div className="text-center mt-6 pt-5 border-t border-gray-100">
+          <div className="text-center mt-6 pt-5 border-t border-[#DDE5DF]">
             <p className="text-sm text-gray-500">
               Don't have an account?
             </p>
@@ -209,7 +209,7 @@ const Login = () => {
             <button
               type="button"
               onClick={() => navigate("/register")}
-              className="mt-2 text-orange-500 font-medium hover:text-orange-600 transition"
+              className="mt-2 text-[#166534] font-medium hover:text-[#14532D] transition"
             >
               Create an account
             </button>

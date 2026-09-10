@@ -114,10 +114,10 @@ const AdminMenu = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#faf9f7]">
+    <div className="min-h-screen bg-[#F1F5F2]">
 
       {/* ================= PAGE HEADER ================= */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
 
@@ -127,11 +127,11 @@ const AdminMenu = () => {
 
               <div className="flex items-center gap-3 mb-2">
 
-                <div className="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#F0FDF4] flex items-center justify-center">
 
                   <Utensils
                     size={21}
-                    className="text-orange-500"
+                    className="text-[#14532D]"
                   />
 
                 </div>
@@ -152,7 +152,7 @@ const AdminMenu = () => {
             {/* ADD MENU */}
             <Link
               to="/admin/add-menu"
-              className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl text-sm font-semibold transition"
+              className="inline-flex items-center justify-center gap-2 bg-[#14532D] hover:bg-[#0F3D2E] text-white px-5 py-3 rounded-xl text-sm font-semibold transition"
             >
 
               <Plus size={18} />
@@ -173,7 +173,7 @@ const AdminMenu = () => {
 
 
         {/* ================= SEARCH + FILTER ================= */}
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 mb-7">
+        <div className="bg-white rounded-2xl border border-[#DDE5DF] shadow-sm p-4 mb-7">
 
           <div className="flex flex-col md:flex-row gap-4">
 
@@ -190,7 +190,7 @@ const AdminMenu = () => {
                 placeholder="Search menu items..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition text-sm"
+                className="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition text-sm"
               />
 
             </div>
@@ -207,7 +207,7 @@ const AdminMenu = () => {
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full appearance-none pl-11 pr-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition text-sm"
+                className="w-full appearance-none pl-11 pr-4 py-3 rounded-xl border border-gray-200 bg-white outline-none focus:border-[#14532D] focus:ring-2 focus:ring-[#F0FDF4] transition text-sm"
               >
 
                 <option value="All">
@@ -265,7 +265,7 @@ const AdminMenu = () => {
 
           <div className="flex items-center justify-center py-24">
 
-            <div className="w-10 h-10 border-4 border-orange-100 border-t-orange-500 rounded-full animate-spin"></div>
+            <div className="w-10 h-10 border-4 border-[#F0FDF4] border-t-[#14532D] rounded-full animate-spin"></div>
 
           </div>
 
@@ -304,13 +304,13 @@ const AdminMenu = () => {
           !error &&
           filteredItems.length === 0 && (
 
-            <div className="bg-white rounded-2xl border border-gray-100 p-12 text-center">
+            <div className="bg-white rounded-2xl border border-[#DDE5DF] p-12 text-center">
 
-              <div className="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full bg-[#F0FDF4] flex items-center justify-center mx-auto mb-4">
 
                 <Utensils
                   size={28}
-                  className="text-orange-400"
+                  className="text-[#14532D]"
                 />
 
               </div>
@@ -339,11 +339,11 @@ const AdminMenu = () => {
 
                 <div
                   key={item._id}
-                  className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition"
+                  className="bg-white rounded-2xl border border-[#DDE5DF] shadow-sm overflow-hidden hover:shadow-md transition"
                 >
 
                   {/* IMAGE */}
-                  <div className="relative h-52 bg-orange-50 overflow-hidden">
+                  <div className="relative h-52 bg-[#F0FDF4] overflow-hidden">
 
                     {item.image?.url ? (
 
@@ -359,7 +359,7 @@ const AdminMenu = () => {
 
                         <Utensils
                           size={45}
-                          className="text-orange-300"
+                          className="text-[#14532D]/30"
                         />
 
                       </div>
@@ -396,7 +396,7 @@ const AdminMenu = () => {
 
                       <div>
 
-                        <p className="text-xs font-semibold text-orange-500 uppercase tracking-wide">
+                        <p className="text-xs font-semibold text-[#D4A017] uppercase tracking-wide">
                           {item.category}
                         </p>
 
@@ -415,7 +415,7 @@ const AdminMenu = () => {
 
 
                     {/* PRICE + ACTIONS */}
-                    <div className="flex items-center justify-between mt-5 pt-4 border-t border-gray-100">
+                    <div className="flex items-center justify-between mt-5 pt-4 border-t border-[#DDE5DF]">
 
                       <span className="text-lg font-bold text-gray-900">
                         ₹{item.price}
@@ -427,7 +427,7 @@ const AdminMenu = () => {
                         {/* MANAGE */}
                         <Link
                           to={`/admin/menu/manage/${item._id}`}
-                          className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-orange-500 transition"
+                          className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#14532D] transition"
                         >
 
                           <Eye size={16} />
