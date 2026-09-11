@@ -17,7 +17,7 @@ const AdminUsers = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // ================= FETCH USERS =================
+  
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -57,7 +57,7 @@ const AdminUsers = () => {
     fetchUsers();
   }, []);
 
-  // ================= DELETE USER =================
+ 
   const handleDelete = async (id, username) => {
     const confirmDelete = window.confirm(
       `Are you sure you want to delete ${username}?`
@@ -97,7 +97,7 @@ const AdminUsers = () => {
     }
   };
 
-  // ================= FORMAT DATE =================
+  
   const formatDate = (date) => {
     if (!date) return "—";
 
@@ -111,7 +111,7 @@ const AdminUsers = () => {
   return (
     <div className="min-h-screen bg-[#F1F5F2]">
 
-      {/* ================= PAGE HEADER ================= */}
+     
       <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
@@ -146,11 +146,11 @@ const AdminUsers = () => {
       </section>
 
 
-      {/* ================= MAIN ================= */}
+      
       <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
 
 
-        {/* ================= COUNT ================= */}
+        
         {!loading && !error && (
 
           <div className="flex items-center justify-between mb-5">
@@ -176,7 +176,7 @@ const AdminUsers = () => {
         )}
 
 
-        {/* ================= LOADING ================= */}
+        
         {loading && (
 
           <div className="flex items-center justify-center py-24">
@@ -188,7 +188,7 @@ const AdminUsers = () => {
         )}
 
 
-        {/* ================= ERROR ================= */}
+        
         {!loading && error && (
 
           <div className="bg-white rounded-2xl border border-red-100 p-10 text-center">
@@ -215,7 +215,7 @@ const AdminUsers = () => {
         )}
 
 
-        {/* ================= EMPTY ================= */}
+       
         {!loading &&
           !error &&
           users.length === 0 && (
@@ -244,7 +244,7 @@ const AdminUsers = () => {
           )}
 
 
-        {/* ================= USERS TABLE ================= */}
+        
         {!loading &&
           !error &&
           users.length > 0 && (
@@ -298,7 +298,7 @@ const AdminUsers = () => {
                         className="hover:bg-[#F1F5F2] transition"
                       >
 
-                        {/* USER */}
+                        
                         <td className="px-6 py-5">
 
                           <div className="flex items-center gap-3">
@@ -329,7 +329,7 @@ const AdminUsers = () => {
                         </td>
 
 
-                        {/* EMAIL */}
+                        
                         <td className="px-6 py-5">
 
                           <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -346,7 +346,7 @@ const AdminUsers = () => {
                         </td>
 
 
-                        {/* PHONE */}
+                       
                         <td className="px-6 py-5">
 
                           <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -363,7 +363,7 @@ const AdminUsers = () => {
                         </td>
 
 
-                        {/* ROLE */}
+                       
                         <td className="px-6 py-5">
 
                           {user.role === "admin" ? (
@@ -391,7 +391,7 @@ const AdminUsers = () => {
                         </td>
 
 
-                        {/* DATE */}
+                       
                         <td className="px-6 py-5">
 
                           <div className="flex items-center gap-2 text-sm text-gray-500">
@@ -408,7 +408,7 @@ const AdminUsers = () => {
                         </td>
 
 
-                        {/* DELETE */}
+                       
                         <td className="px-6 py-5 text-right">
 
                           <button
@@ -439,7 +439,7 @@ const AdminUsers = () => {
               </div>
 
 
-              {/* ================= MOBILE CARDS ================= */}
+              
               <div className="md:hidden divide-y divide-[#DDE5DF]">
 
                 {users.map((user) => (

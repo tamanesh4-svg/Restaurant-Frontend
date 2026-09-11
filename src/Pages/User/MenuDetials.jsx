@@ -10,7 +10,7 @@ const MenuDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // ================= FETCH MENU ITEM =================
+  
   useEffect(() => {
     const fetchMenuItem = async () => {
       try {
@@ -37,7 +37,7 @@ const MenuDetails = () => {
     fetchMenuItem();
   }, [id]);
 
-  // ================= LOADING =================
+  
   if (loading) {
     return (
       <div className="min-h-screen bg-[#F6F5EF] flex items-center justify-center">
@@ -46,7 +46,6 @@ const MenuDetails = () => {
     );
   }
 
-  // ================= ERROR =================
   if (error || !item) {
     return (
       <div className="min-h-screen bg-[#F6F5EF] flex flex-col items-center justify-center px-5">
@@ -79,10 +78,10 @@ const MenuDetails = () => {
   return (
     <div className="bg-[#F6F5EF] min-h-screen text-gray-900">
 
-      {/* ================= MAIN ================= */}
+     
       <section className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-10">
 
-        {/* Back Button */}
+        
         <Link
           to="/menu"
           className="inline-flex items-center gap-2 text-gray-600 hover:text-[#166534] transition mb-8"
@@ -92,12 +91,12 @@ const MenuDetails = () => {
         </Link>
 
 
-        {/* ================= PRODUCT ================= */}
+        
         <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
 
           <div className="grid md:grid-cols-2">
 
-            {/* ================= IMAGE ================= */}
+            
             <div className="h-80 md:h-[500px] bg-[#F0FDF4]">
 
               {item.image?.url ? (
@@ -118,28 +117,28 @@ const MenuDetails = () => {
             </div>
 
 
-            {/* ================= DETAILS ================= */}
+            
             <div className="p-7 sm:p-10 flex flex-col justify-center">
 
-              {/* Category */}
+             
               <span className="self-start bg-[#F0FDF4] text-[#166534] text-sm font-semibold px-4 py-2 rounded-full">
                 {item.category}
               </span>
 
 
-              {/* Name */}
+              
               <h1 className="text-3xl sm:text-4xl font-bold mt-5">
                 {item.name}
               </h1>
 
 
-              {/* Description */}
+              
               <p className="text-gray-500 leading-relaxed mt-5 text-base">
                 {item.description}
               </p>
 
 
-              {/* Price */}
+              
               <div className="mt-7">
 
                 <p className="text-sm text-gray-400">
@@ -153,7 +152,7 @@ const MenuDetails = () => {
               </div>
 
 
-              {/* Availability */}
+             
               <div className="mt-6">
 
                 {item.availability ? (
@@ -171,7 +170,7 @@ const MenuDetails = () => {
               </div>
 
 
-              {/* Back Button */}
+              
               <Link
                 to="/menu"
                 className="mt-8 inline-flex items-center justify-center gap-2 bg-[#166534] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#14532D] transition"

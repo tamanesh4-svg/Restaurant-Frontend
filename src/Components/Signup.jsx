@@ -108,10 +108,10 @@ const Signup = () => {
 
       <div className="w-full max-w-md">
 
-        {/* Signup Card */}
+        
         <div className="bg-white border border-[#DDE5DF] rounded-2xl shadow-sm p-6 sm:p-8">
 
-          {/* Icon */}
+         
           <div className="flex justify-center mb-5">
             <div className="w-12 h-12 rounded-full bg-[#F0FDF4] flex items-center justify-center">
               <UserPlus
@@ -121,7 +121,7 @@ const Signup = () => {
             </div>
           </div>
 
-          {/* Heading */}
+          
           <div className="text-center mb-7">
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
               Create Account
@@ -138,7 +138,7 @@ const Signup = () => {
 
           <form onSubmit={handleSubmit}>
 
-            {/* Name */}
+            
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Full Name
@@ -164,7 +164,7 @@ const Signup = () => {
               )}
             </div>
 
-            {/* Email */}
+            
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
@@ -190,7 +190,7 @@ const Signup = () => {
               )}
             </div>
 
-            {/* Phone */}
+            
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Phone Number
@@ -216,7 +216,7 @@ const Signup = () => {
               )}
             </div>
 
-            {/* Password */}
+           
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Password
@@ -242,7 +242,7 @@ const Signup = () => {
               )}
             </div>
 
-            {/* Confirm Password */}
+            
             <div className="mb-5">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Confirm Password
@@ -268,14 +268,13 @@ const Signup = () => {
               )}
             </div>
 
-            {/* Backend Error */}
+            
             {isError && (
               <p className="text-sm text-red-600 mb-4">
                 {isError}
               </p>
             )}
 
-            {/* Signup Button */}
             <button
               type="submit"
               disabled={isLoading}
@@ -295,7 +294,7 @@ const Signup = () => {
             </button>
           </form>
 
-          {/* Login */}
+         
           <div className="text-center mt-6 pt-5 border-t border-[#DDE5DF]">
             <p className="text-sm text-gray-500">
               Already have an account?

@@ -98,17 +98,13 @@ const Login = () => {
 
       <div className="w-full max-w-md">
 
-        {/* Login Card */}
+        
         <div className="bg-white border border-[#DDE5DF] rounded-2xl shadow-sm p-6 sm:p-8">
 
-          {/* Icon */}
-          <div className="flex justify-center mb-5">
-            <div className="w-12 h-12 rounded-full bg-[#F0FDF4] flex items-center justify-center">
-              <LogIn className="text-[#166534]" size={24} />
-            </div>
-          </div>
+          
+          
 
-          {/* Heading */}
+          
           <div className="text-center mb-7">
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
               Welcome Back
@@ -124,7 +120,7 @@ const Login = () => {
 
           <form onSubmit={handleSubmit}>
 
-            {/* Email */}
+            
             <div className="mb-5">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
@@ -150,7 +146,7 @@ const Login = () => {
               )}
             </div>
 
-            {/* Password */}
+           
             <div className="mb-5">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Password
@@ -176,14 +172,14 @@ const Login = () => {
               )}
             </div>
 
-            {/* Backend Error */}
+           
             {isError && (
               <p className="text-sm text-red-600 mb-4">
                 {isError}
               </p>
             )}
 
-            {/* Login Button */}
+            
             <button
               type="submit"
               disabled={isLoading}
@@ -200,7 +196,7 @@ const Login = () => {
             </button>
           </form>
 
-          {/* Signup */}
+         
           <div className="text-center mt-6 pt-5 border-t border-[#DDE5DF]">
             <p className="text-sm text-gray-500">
               Don't have an account?

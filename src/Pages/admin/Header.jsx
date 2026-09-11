@@ -18,7 +18,7 @@ const Header = () => {
 
   const navigate = useNavigate();
 
-  // ================= LOGOUT =================
+  
   const handleLogout = () => {
     Cookies.remove("token");
     Cookies.remove("role");
@@ -26,7 +26,7 @@ const Header = () => {
     navigate("/login");
   };
 
-  // ================= NAV LINKS =================
+  
   const navLinks = [
     {
       name: "Dashboard",
@@ -52,7 +52,7 @@ const Header = () => {
 
         <div className="h-16 flex items-center justify-between">
 
-          {/* ================= LOGO ================= */}
+         
           <Link
             to="/admin/dashboard"
             className="flex items-center gap-2.5"
@@ -84,7 +84,7 @@ const Header = () => {
           </Link>
 
 
-          {/* ================= DESKTOP NAV ================= */}
+         
           <div className="hidden md:flex items-center gap-2">
 
             {navLinks.map((link) => {
@@ -116,7 +116,7 @@ const Header = () => {
           </div>
 
 
-          {/* ================= RIGHT SIDE ================= */}
+          
           <div className="hidden md:flex items-center gap-4">
 
             {/* Admin Badge */}
@@ -144,7 +144,7 @@ const Header = () => {
             </div>
 
 
-            {/* Logout */}
+           
             <button
               onClick={handleLogout}
               className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-red-500 transition"
@@ -156,7 +156,7 @@ const Header = () => {
           </div>
 
 
-          {/* ================= MOBILE BUTTON ================= */}
+         
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-[#F1F5F2] transition"
@@ -171,7 +171,7 @@ const Header = () => {
         </div>
 
 
-        {/* ================= MOBILE MENU ================= */}
+        
         {mobileOpen && (
 
           <div className="md:hidden border-t border-[#DDE5DF] py-4">
@@ -206,7 +206,7 @@ const Header = () => {
               })}
 
 
-              {/* Mobile Admin Info */}
+             
               <div className="border-t border-[#DDE5DF] mt-3 pt-3">
 
                 <div className="flex items-center gap-3 px-4 py-3">
@@ -233,7 +233,7 @@ const Header = () => {
                 </div>
 
 
-                {/* Mobile Logout */}
+                
                 <button
                   onClick={handleLogout}
                   className="w-full flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-600 hover:text-red-500 transition"

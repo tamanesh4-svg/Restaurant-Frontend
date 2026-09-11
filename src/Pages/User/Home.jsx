@@ -10,15 +10,15 @@ const Home = () => {
 
   return (
     <div className="bg-[#F6F5EF] text-gray-900">
-      {/* ================= HERO SECTION ================= */}
+      
       <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-10 pb-16 lg:pt-16 lg:pb-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Left Content */}
+          
           <div>
-            {/* HELLO USER */}
+            
             {token && username && (
               <p className="text-[#166534] font-semibold text-lg mb-4">
-                Hello, {username} 👋
+                Hello, {username} 
               </p>
             )}
 
@@ -57,7 +57,7 @@ const Home = () => {
               )}
             </div>
 
-            {/* Small Info */}
+            
             <div className="flex flex-wrap gap-6 mt-10 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Clock size={17} className="text-[#166534]" />
@@ -71,7 +71,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Right Image */}
+          
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-lg">
               <img
@@ -81,7 +81,7 @@ const Home = () => {
               />
             </div>
 
-            {/* Floating Card */}
+            
             <div className="absolute bottom-5 left-5 sm:bottom-7 sm:left-7 bg-white rounded-xl shadow-lg px-5 py-4">
               <p className="text-xs text-gray-500 mb-1">
                 Today's recommendation
@@ -97,7 +97,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= CATEGORY SECTION ================= */}
+      
       <section className="bg-white border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-14">
           <div className="text-center mb-10">
@@ -115,7 +115,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {/* Starter */}
+           
             <Link
               to="/menu?category=Starter"
               className="group bg-[#F6F5EF] border border-gray-100 rounded-xl p-6 text-center hover:border-[#166534]/30 hover:shadow-sm transition"
@@ -125,7 +125,7 @@ const Home = () => {
               <p className="text-sm text-gray-500 mt-1">Start your meal</p>
             </Link>
 
-            {/* Main Course */}
+            
             <Link
               to="/menu?category=Main Course"
               className="group bg-[#F6F5EF] border border-gray-100 rounded-xl p-6 text-center hover:border-[#166534]/30 hover:shadow-sm transition"
@@ -137,7 +137,7 @@ const Home = () => {
               </p>
             </Link>
 
-            {/* Dessert */}
+            
             <Link
               to="/menu?category=Dessert"
               className="group bg-[#F6F5EF] border border-gray-100 rounded-xl p-6 text-center hover:border-[#166534]/30 hover:shadow-sm transition"
@@ -147,7 +147,7 @@ const Home = () => {
               <p className="text-sm text-gray-500 mt-1">Something sweet</p>
             </Link>
 
-            {/* Beverage */}
+            
             <Link
               to="/menu?category=Beverage"
               className="group bg-[#F6F5EF] border border-gray-100 rounded-xl p-6 text-center hover:border-[#166534]/30 hover:shadow-sm transition"
@@ -162,7 +162,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= WHY RESTTASTE ================= */}
+     
       <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
@@ -203,7 +203,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
+      
       <section className="px-5 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto bg-[#0F3D2E] rounded-2xl px-6 sm:px-10 py-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white">

@@ -20,7 +20,7 @@ const AdminHome = () => {
   const [loadingMenu, setLoadingMenu] = useState(true);
   const [loadingUnavailable, setLoadingUnavailable] = useState(true);
 
-  // ================= FETCH TOTAL USERS =================
+  
   useEffect(() => {
     const fetchTotalUsers = async () => {
       try {
@@ -48,7 +48,7 @@ const AdminHome = () => {
     fetchTotalUsers();
   }, []);
 
-  // ================= FETCH TOTAL MENU ITEMS =================
+ 
   useEffect(() => {
     const fetchTotalMenuItems = async () => {
       try {
@@ -76,7 +76,7 @@ const AdminHome = () => {
     fetchTotalMenuItems();
   }, []);
 
-  // ================= FETCH UNAVAILABLE ITEMS =================
+  
   useEffect(() => {
     const fetchUnavailableItems = async () => {
       try {
@@ -110,7 +110,7 @@ const AdminHome = () => {
   return (
     <div className="bg-[#F1F5F2]">
 
-      {/* ================= HEADER ================= */}
+      
       <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-10">
@@ -159,11 +159,11 @@ const AdminHome = () => {
       </section>
 
 
-      {/* ================= MAIN CONTENT ================= */}
+      
       <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-10">
 
 
-        {/* ================= OVERVIEW ================= */}
+       
         <div className="mb-8">
 
           <h2 className="text-xl font-bold text-gray-900">
@@ -177,11 +177,11 @@ const AdminHome = () => {
         </div>
 
 
-        {/* ================= STATS ================= */}
+       
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
 
 
-          {/* TOTAL MENU ITEMS */}
+          
           <div className="bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm">
 
             <div className="flex items-center justify-between">
@@ -225,7 +225,7 @@ const AdminHome = () => {
           </div>
 
 
-          {/* REGISTERED USERS */}
+          
           <div className="bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm">
 
             <div className="flex items-center justify-between">
@@ -269,7 +269,7 @@ const AdminHome = () => {
           </div>
 
 
-          {/* UNAVAILABLE ITEMS */}
+          
           <div className="bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm">
 
             <div className="flex items-center justify-between">
@@ -315,7 +315,7 @@ const AdminHome = () => {
         </div>
 
 
-        {/* ================= QUICK ACTIONS ================= */}
+        
         <div className="mb-8">
 
           <h2 className="text-xl font-bold text-gray-900">
@@ -332,7 +332,7 @@ const AdminHome = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
 
 
-          {/* MANAGE MENU */}
+          
           <Link
             to="/admin/menu"
             className="group bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm hover:shadow-md transition"
@@ -371,7 +371,7 @@ const AdminHome = () => {
           </Link>
 
 
-          {/* MANAGE USERS */}
+          
           <Link
             to="/admin/users"
             className="group bg-white rounded-2xl p-6 border border-[#DDE5DF] shadow-sm hover:shadow-md transition"
@@ -412,7 +412,7 @@ const AdminHome = () => {
         </div>
 
 
-        {/* ================= BOTTOM INFO ================= */}
+       
         <div className="bg-[#14532D] rounded-2xl p-6 sm:p-8 text-white">
 
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">

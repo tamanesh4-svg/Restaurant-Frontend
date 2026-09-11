@@ -3,13 +3,13 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import AdminFooter from "./AdminFooter";
 
-const AdminWrapper = () => {
+const AdminLayout = () => {
   return (
     <div className="min-h-screen flex flex-col">
 
       <Header />
 
-      <main className="flex-1">
+      <main className="flex-1 ">
         <Outlet />
       </main>
 
@@ -19,4 +19,4 @@ const AdminWrapper = () => {
   );
 };
 
-export default AdminWrapper;
+export default AdminLayout;

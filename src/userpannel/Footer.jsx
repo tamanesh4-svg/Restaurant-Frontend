@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#1F2937] text-gray-300">
 
-      {/* ================= MAIN FOOTER ================= */}
+      
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12">
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -34,7 +34,6 @@ const Footer = () => {
           </div>
 
 
-          {/* QUICK LINKS */}
           <div>
 
             <h3 className="text-white font-semibold mb-4">
@@ -76,7 +75,7 @@ const Footer = () => {
           </div>
 
 
-          {/* CATEGORIES */}
+          
           <div>
 
             <h3 className="text-white font-semibold mb-4">
@@ -118,7 +117,7 @@ const Footer = () => {
           </div>
 
 
-          {/* CONTACT */}
+         
           <div>
 
             <h3 className="text-white font-semibold mb-4">
@@ -169,7 +168,7 @@ const Footer = () => {
       </div>
 
 
-      {/* ================= COPYRIGHT ================= */}
+     
       <div className="border-t border-gray-700">
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-5">

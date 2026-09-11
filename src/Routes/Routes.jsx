@@ -7,11 +7,13 @@ import Menu from "../Pages/User/Menu";
 import MenuDetails from "../Pages/User/MenuDetials";
 import AdminProtected from "../Components/AdminProtected";
 import AdminHome from "../Pages/admin/adminHome";
-import AdminWrapper from "../Pages/admin/AdminWrapper";
+
 import AddMenu from "../Pages/admin/AddMenu";
 import AdminMenu from "../Pages/admin/AdminMenu";
 import ManageMenu from "../Pages/admin/ManageMenu";
 import AdminUsers from "../Pages/admin/AdminUsers";
+import AdminLayout from "../Pages/admin/AdminLayout";
+
 const Routes = createBrowserRouter([
   {
     path: "/",
@@ -45,7 +47,7 @@ const Routes = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <AdminWrapper />,
+        element: <AdminLayout/>,
         children: [
           {
             path: "dashboard",

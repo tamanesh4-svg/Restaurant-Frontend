@@ -32,7 +32,7 @@ const ManageMenu = () => {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
-  // ================= FETCH PARTICULAR MENU ITEM =================
+ 
   useEffect(() => {
 
     const fetchMenuItem = async () => {
@@ -88,7 +88,7 @@ const ManageMenu = () => {
   }, [id]);
 
 
-  // ================= HANDLE INPUT =================
+  
   const handleChange = (e) => {
 
     const { name, value } = e.target;
@@ -101,7 +101,7 @@ const ManageMenu = () => {
   };
 
 
-  // ================= HANDLE AVAILABILITY =================
+ 
   const handleAvailability = (e) => {
 
     setFormData((prev) => ({
@@ -112,7 +112,6 @@ const ManageMenu = () => {
   };
 
 
-  // ================= HANDLE IMAGE =================
   const handleImageChange = (e) => {
 
     const file = e.target.files[0];
@@ -128,7 +127,7 @@ const ManageMenu = () => {
   };
 
 
-  // ================= REMOVE NEW IMAGE =================
+ 
   const removeNewImage = () => {
 
     setNewImage(null);
@@ -137,7 +136,7 @@ const ManageMenu = () => {
   };
 
 
-  // ================= SUBMIT =================
+  
   const handleSubmit = async (e) => {
 
     e.preventDefault();
@@ -189,7 +188,7 @@ const ManageMenu = () => {
         formData.availability
       );
 
-      // Only send image if admin selected a new one
+      
       if (newImage) {
         data.append("image", newImage);
       }
@@ -239,7 +238,7 @@ const ManageMenu = () => {
   };
 
 
-  // ================= LOADING =================
+  
   if (loading) {
 
     return (
@@ -257,7 +256,7 @@ const ManageMenu = () => {
 
     <div className="min-h-screen bg-[#F1F5F2]">
 
-      {/* ================= HEADER ================= */}
+     
       <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
@@ -302,7 +301,7 @@ const ManageMenu = () => {
       </section>
 
 
-      {/* ================= FORM ================= */}
+      
       <main className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 py-10">
 
         <form
@@ -315,11 +314,11 @@ const ManageMenu = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
 
-              {/* ================= LEFT ================= */}
+              
               <div className="space-y-6">
 
 
-                {/* NAME */}
+                
                 <div>
 
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -338,7 +337,7 @@ const ManageMenu = () => {
                 </div>
 
 
-                {/* DESCRIPTION */}
+               
                 <div>
 
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -357,7 +356,7 @@ const ManageMenu = () => {
                 </div>
 
 
-                {/* CATEGORY */}
+               
                 <div>
 
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -396,11 +395,11 @@ const ManageMenu = () => {
                 </div>
 
 
-                {/* PRICE + AVAILABILITY */}
+                
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
 
-                  {/* PRICE */}
+                
                   <div>
 
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -428,7 +427,6 @@ const ManageMenu = () => {
                   </div>
 
 
-                  {/* AVAILABILITY */}
                   <div>
 
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -458,7 +456,7 @@ const ManageMenu = () => {
               </div>
 
 
-              {/* ================= RIGHT ================= */}
+             
               <div>
 
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -466,7 +464,7 @@ const ManageMenu = () => {
                 </label>
 
 
-                {/* IMAGE */}
+               
                 <div className="relative h-80 rounded-2xl overflow-hidden bg-[#F0FDF4] border border-[#DDE5DF]">
 
                   {preview ? (
@@ -503,7 +501,7 @@ const ManageMenu = () => {
                   )}
 
 
-                  {/* REMOVE NEW IMAGE */}
+                 
                   {preview && (
 
                     <button
@@ -519,7 +517,7 @@ const ManageMenu = () => {
                 </div>
 
 
-                {/* UPLOAD BUTTON */}
+                
                 <label
                   htmlFor="newImage"
                   className="mt-4 flex items-center justify-center gap-2 w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium text-gray-600 hover:border-[#14532D] hover:text-[#14532D] hover:bg-[#F0FDF4] cursor-pointer transition"
@@ -561,7 +559,7 @@ const ManageMenu = () => {
           </div>
 
 
-          {/* ================= FOOTER ================= */}
+         
           <div className="border-t border-[#DDE5DF] bg-[#F1F5F2] px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
             <p className="text-xs text-gray-400">

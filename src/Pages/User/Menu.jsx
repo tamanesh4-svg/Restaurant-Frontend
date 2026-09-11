@@ -21,7 +21,6 @@ const Menu = () => {
     "Beverage",
   ];
 
-  // ================= FETCH MENU ITEMS =================
   useEffect(() => {
     const fetchMenuItems = async () => {
       try {
@@ -46,7 +45,7 @@ const Menu = () => {
     fetchMenuItems();
   }, []);
 
-  // ================= CATEGORY FROM URL =================
+  
   useEffect(() => {
     const categoryFromUrl = searchParams.get("category");
 
@@ -57,18 +56,17 @@ const Menu = () => {
     }
   }, [searchParams]);
 
-  // ================= FILTER MENU =================
   useEffect(() => {
     let items = [...menuItems];
 
-    // Category filter
+    
     if (activeCategory !== "All") {
       items = items.filter(
         (item) => item.category === activeCategory
       );
     }
 
-    // Search filter
+    
     if (search.trim() !== "") {
       items = items.filter((item) =>
         item.name.toLowerCase().includes(search.toLowerCase())
@@ -81,7 +79,7 @@ const Menu = () => {
   return (
     <div className="bg-[#F6F5EF] min-h-screen text-gray-900">
 
-      {/* ================= HEADER ================= */}
+      
       <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-12 pb-8">
 
         <div className="text-center max-w-2xl mx-auto">
@@ -104,10 +102,10 @@ const Menu = () => {
       </section>
 
 
-      {/* ================= SEARCH + CATEGORY ================= */}
+      
       <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
-        {/* Search */}
+        
         <div className="max-w-md mx-auto mb-8">
 
           <div className="relative">
@@ -130,7 +128,7 @@ const Menu = () => {
         </div>
 
 
-        {/* Categories */}
+        
         <div className="flex gap-3 overflow-x-auto pb-3 justify-start sm:justify-center">
 
           {categories.map((category) => (
@@ -152,10 +150,10 @@ const Menu = () => {
       </section>
 
 
-      {/* ================= MENU ITEMS ================= */}
+     
       <section className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-10">
 
-        {/* ================= LOADING ================= */}
+        
         {loading && (
           <div className="flex justify-center items-center py-20">
 
@@ -165,7 +163,7 @@ const Menu = () => {
         )}
 
 
-        {/* ================= ERROR ================= */}
+       
         {!loading && error && (
           <div className="text-center py-20">
 
@@ -184,7 +182,7 @@ const Menu = () => {
         )}
 
 
-        {/* ================= EMPTY ================= */}
+       
         {!loading &&
           !error &&
           filteredItems.length === 0 && (
@@ -207,7 +205,7 @@ const Menu = () => {
           )}
 
 
-        {/* ================= CARDS ================= */}
+       
         {!loading &&
           !error &&
           filteredItems.length > 0 && (
@@ -221,7 +219,7 @@ const Menu = () => {
                   className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition duration-300"
                 >
 
-                  {/* ================= IMAGE ================= */}
+                 
                   <div className="relative h-52 overflow-hidden">
 
                     {item.image?.url ? (
@@ -239,13 +237,12 @@ const Menu = () => {
                       </div>
                     )}
 
-                    {/* Category */}
                     <span className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full">
                       {item.category}
                     </span>
 
 
-                    {/* Availability */}
+                   
                     <span
                       className={`absolute top-3 right-3 text-xs font-medium px-3 py-1.5 rounded-full ${
                         item.availability
@@ -261,7 +258,7 @@ const Menu = () => {
                   </div>
 
 
-                  {/* ================= CONTENT ================= */}
+                 
                   <div className="p-5">
 
                     <h3 className="font-semibold text-lg">
@@ -273,7 +270,7 @@ const Menu = () => {
                     </p>
 
 
-                    {/* Bottom */}
+                    
                     <div className="flex items-center justify-between mt-5">
 
                       <p className="text-[#D4A017] font-bold text-lg">

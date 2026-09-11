@@ -19,7 +19,7 @@ const AdminMenu = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // ================= FETCH MENU ITEMS =================
+  
   useEffect(() => {
     const fetchMenuItems = async () => {
       try {
@@ -57,7 +57,7 @@ const AdminMenu = () => {
     fetchMenuItems();
   }, []);
 
-  // ================= DELETE MENU ITEM =================
+  
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this menu item?"
@@ -80,7 +80,7 @@ const AdminMenu = () => {
       );
 
       if (response.data.success) {
-        // Remove deleted item from current list
+       
         setMenuItems((prevItems) =>
           prevItems.filter((item) => item._id !== id)
         );
@@ -97,7 +97,6 @@ const AdminMenu = () => {
     }
   };
 
-  // ================= FILTER MENU =================
   const filteredItems = menuItems.filter((item) => {
     const matchesSearch =
       item.name
@@ -116,7 +115,7 @@ const AdminMenu = () => {
   return (
     <div className="min-h-screen bg-[#F1F5F2]">
 
-      {/* ================= PAGE HEADER ================= */}
+     
       <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
@@ -149,7 +148,7 @@ const AdminMenu = () => {
             </div>
 
 
-            {/* ADD MENU */}
+            
             <Link
               to="/admin/addmenu"
               className="inline-flex items-center justify-center gap-2 bg-[#14532D] hover:bg-[#0F3D2E] text-white px-5 py-3 rounded-xl text-sm font-semibold transition"
@@ -168,16 +167,16 @@ const AdminMenu = () => {
       </section>
 
 
-      {/* ================= MAIN ================= */}
+      
       <main className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
 
 
-        {/* ================= SEARCH + FILTER ================= */}
+        
         <div className="bg-white rounded-2xl border border-[#DDE5DF] shadow-sm p-4 mb-7">
 
           <div className="flex flex-col md:flex-row gap-4">
 
-            {/* SEARCH */}
+           
             <div className="relative flex-1">
 
               <Search
@@ -196,7 +195,7 @@ const AdminMenu = () => {
             </div>
 
 
-            {/* CATEGORY */}
+          
             <div className="relative md:w-56">
 
               <Filter
@@ -239,7 +238,7 @@ const AdminMenu = () => {
         </div>
 
 
-        {/* ================= ITEM COUNT ================= */}
+        
         {!loading && !error && (
           <div className="flex items-center justify-between mb-5">
 
@@ -260,7 +259,7 @@ const AdminMenu = () => {
         )}
 
 
-        {/* ================= LOADING ================= */}
+        
         {loading && (
 
           <div className="flex items-center justify-center py-24">
@@ -272,7 +271,7 @@ const AdminMenu = () => {
         )}
 
 
-        {/* ================= ERROR ================= */}
+       
         {!loading && error && (
 
           <div className="bg-white rounded-2xl border border-red-100 p-10 text-center">
@@ -299,7 +298,6 @@ const AdminMenu = () => {
         )}
 
 
-        {/* ================= EMPTY ================= */}
         {!loading &&
           !error &&
           filteredItems.length === 0 && (
@@ -328,7 +326,7 @@ const AdminMenu = () => {
           )}
 
 
-        {/* ================= MENU GRID ================= */}
+        
         {!loading &&
           !error &&
           filteredItems.length > 0 && (
@@ -342,7 +340,7 @@ const AdminMenu = () => {
                   className="bg-white rounded-2xl border border-[#DDE5DF] shadow-sm overflow-hidden hover:shadow-md transition"
                 >
 
-                  {/* IMAGE */}
+                 
                   <div className="relative h-52 bg-[#F0FDF4] overflow-hidden">
 
                     {item.image?.url ? (
@@ -367,7 +365,7 @@ const AdminMenu = () => {
                     )}
 
 
-                    {/* AVAILABILITY */}
+                   
                     <div className="absolute top-3 right-3">
 
                       {item.availability ? (
@@ -389,7 +387,7 @@ const AdminMenu = () => {
                   </div>
 
 
-                  {/* CONTENT */}
+                  
                   <div className="p-5">
 
                     <div className="flex items-start justify-between gap-3">
@@ -414,7 +412,7 @@ const AdminMenu = () => {
                     </p>
 
 
-                    {/* PRICE + ACTIONS */}
+                 
                     <div className="flex items-center justify-between mt-5 pt-4 border-t border-[#DDE5DF]">
 
                       <span className="text-lg font-bold text-gray-900">
@@ -424,7 +422,7 @@ const AdminMenu = () => {
 
                       <div className="flex items-center gap-3">
 
-                        {/* MANAGE */}
+                       
                         <Link
                           to={`/admin/menu/manage/${item._id}`}
                           className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#14532D] transition"
@@ -437,7 +435,7 @@ const AdminMenu = () => {
                         </Link>
 
 
-                        {/* DELETE */}
+                        
                         <button
                           type="button"
                           onClick={() => handleDelete(item._id)}

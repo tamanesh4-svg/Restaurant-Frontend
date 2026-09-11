@@ -27,7 +27,7 @@ const AddMenu = () => {
   const [preview, setPreview] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // ================= HANDLE INPUT =================
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -37,7 +37,7 @@ const AddMenu = () => {
     }));
   };
 
-  // ================= HANDLE AVAILABILITY =================
+
   const handleAvailability = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -45,7 +45,7 @@ const AddMenu = () => {
     }));
   };
 
-  // ================= HANDLE IMAGE =================
+  
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 
@@ -55,13 +55,13 @@ const AddMenu = () => {
     setPreview(URL.createObjectURL(file));
   };
 
-  // ================= REMOVE IMAGE =================
+ 
   const removeImage = () => {
     setImage(null);
     setPreview(null);
   };
 
-  // ================= SUBMIT =================
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -147,17 +147,17 @@ const AddMenu = () => {
   return (
     <div className="min-h-screen bg-[#F1F5F2]">
 
-      {/* ================= PAGE HEADER ================= */}
+     
       <section className="bg-white border-b border-[#DDE5DF]">
 
         <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 py-8">
 
           <Link
-            to="/admin/addmenu"
+            to="/admin/dashboard"
             className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#14532D] transition mb-5"
           >
             <ArrowLeft size={17} />
-            Back to Menu
+            Back to Dashboard
           </Link>
 
           <div className="flex items-center gap-4">
@@ -186,7 +186,7 @@ const AddMenu = () => {
       </section>
 
 
-      {/* ================= FORM ================= */}
+      
       <main className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 py-10">
 
         <form
@@ -199,10 +199,10 @@ const AddMenu = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
 
-              {/* ================= LEFT SIDE ================= */}
+             
               <div className="space-y-6">
 
-                {/* NAME */}
+                
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Item Name
@@ -219,7 +219,7 @@ const AddMenu = () => {
                 </div>
 
 
-                {/* DESCRIPTION */}
+               
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Description
@@ -236,7 +236,7 @@ const AddMenu = () => {
                 </div>
 
 
-                {/* CATEGORY */}
+                
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Category
@@ -273,10 +273,10 @@ const AddMenu = () => {
                 </div>
 
 
-                {/* PRICE + AVAILABILITY */}
+                
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
-                  {/* PRICE */}
+                  
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Price
@@ -303,7 +303,6 @@ const AddMenu = () => {
                   </div>
 
 
-                  {/* AVAILABILITY */}
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Availability
@@ -331,7 +330,7 @@ const AddMenu = () => {
               </div>
 
 
-              {/* ================= RIGHT SIDE ================= */}
+             
               <div>
 
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -417,7 +416,7 @@ const AddMenu = () => {
           </div>
 
 
-          {/* ================= FORM FOOTER ================= */}
+         
           <div className="border-t border-[#DDE5DF] bg-[#F1F5F2] px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
             <p className="text-xs text-gray-400">

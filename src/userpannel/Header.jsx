@@ -32,20 +32,20 @@ const Navbar = () => {
 
                 <div className="h-16 flex items-center justify-between">
 
-                    {/* Logo */}
+                    
                     <Link
                         to="/"
                         onClick={() => setIsOpen(false)}
                         className="text-2xl font-bold tracking-tight text-gray-900"
                     >
-                        Tasty<span className="text-[#166534]">Taste</span>
+                        Tasty<span className="text-[#166534]">Bites</span>
                     </Link>
 
 
-                    {/* Desktop Navigation */}
+                   
                     <div className="hidden md:flex items-center gap-8">
 
-                        {/* Home */}
+                       
                         <NavLink
                             to="/"
                             end
@@ -57,7 +57,7 @@ const Navbar = () => {
 
                         {!token ? (
                             <>
-                                {/* Login */}
+                                
                                 <NavLink
                                     to="/login"
                                     className={navLinkClass}
@@ -65,7 +65,7 @@ const Navbar = () => {
                                     Login
                                 </NavLink>
 
-                                {/* Sign Up */}
+                               
                                 <NavLink
                                     to="/register"
                                     className={({ isActive }) =>
@@ -92,7 +92,7 @@ const Navbar = () => {
                     </div>
 
 
-                    {/* Mobile Menu Button */}
+                    
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="md:hidden p-2 text-gray-700 hover:text-[#166534]"
@@ -107,13 +107,12 @@ const Navbar = () => {
                 </div>
 
 
-                {/* Mobile Navigation */}
                 {isOpen && (
                     <div className="md:hidden border-t border-gray-100 py-4">
 
                         <div className="flex flex-col gap-4">
 
-                            {/* Home */}
+                            
                             <NavLink
                                 to="/"
                                 end
@@ -126,7 +125,7 @@ const Navbar = () => {
 
                             {!token ? (
                                 <>
-                                    {/* Login */}
+                                   
                                     <NavLink
                                         to="/login"
                                         onClick={() => setIsOpen(false)}
@@ -135,7 +134,7 @@ const Navbar = () => {
                                         Login
                                     </NavLink>
 
-                                    {/* Sign Up */}
+                                  
                                     <NavLink
                                         to="/register"
                                         onClick={() => setIsOpen(false)}
